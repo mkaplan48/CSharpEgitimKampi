@@ -10,6 +10,20 @@ namespace _04_Loops
     {
         static void Main(string[] args)
         {
+            #region Donguler For
+            //for(x;y;z)
+            //x=başlangıç
+            //y=bitiş
+            //z=artış-azalış
+            int i;
+            for (i = 1; i <= 5; i++)
+            {
+                Console.WriteLine("Muhammet KAPLAN");
+            
+            }
+            Console.Read();
+
+            #endregion
         }
     }
 }
