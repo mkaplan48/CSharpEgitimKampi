@@ -21,7 +21,7 @@ namespace _10_DataBaseCrud
 
             SqlConnection connection = new SqlConnection("Data Source=TIGER;initial catalog=EgitimKampiDb;integrated security=true");
             connection.Open();
-            SqlCommand command= new SqlCommand("insert into TblCategory(CategoryName) values (@p1",connection); 
+            SqlCommand command= new SqlCommand("insert into TblCategory(CategoryName) values (@p1)",connection); 
             command.Parameters.AddWithValue("@p1",categoryName); 
             command.ExecuteNonQuery();  
             connection.Close();
