@@ -31,7 +31,7 @@ namespace _09_DatabaseProject
             SqlConnection connection = new SqlConnection("Data Source=TIGER;initial " +
                 "Catalog=EgitimKampiDb;integrated security=true");// bağlantı oluşturdum
             connection.Open();//bağlantıyı açtım 
-            SqlCommand command = new SqlCommand("Select * from TblCategory",connection);//bu tablonunu hangi veri tabanında oluduğunu bildirmek için yanına connection yazıldı
+            SqlCommand command = new SqlCommand("Select * from TblCategory",connection);//bu tablonunu hangi veri tabanında oluşduğunu bildirmek için yanına connection yazıldı
             SqlDataAdapter adapter = new SqlDataAdapter(command);//benim c# ile veri tabanımın köprü oluşturmasını sağlar
             DataTable dataTable=new DataTable(); 
             adapter.Fill(dataTable);
