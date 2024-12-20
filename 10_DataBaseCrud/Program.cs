@@ -56,35 +56,49 @@ namespace _10_DataBaseCrud
 
             #endregion
             #region  Ürün Listeleme İşlemi
-            SqlConnection baglanti = new SqlConnection("Data Source=TIGER;initial Catalog=EgitimKampiDb;integrated security=true");
-            baglanti.Open();
+            //SqlConnection baglanti = new SqlConnection("Data Source=TIGER;initial Catalog=EgitimKampiDb;integrated security=true");
+            //baglanti.Open();
 
-            SqlCommand sqlKomutu = new SqlCommand("Select * From TblProduct",baglanti);
+            //SqlCommand sqlKomutu = new SqlCommand("Select * From TblProduct",baglanti);
 
-            SqlDataAdapter sqlAdapteEt=new SqlDataAdapter(sqlKomutu);//SQL den veriler c# çekecek köprü görevi görür
-            DataTable sqlCekilenVeriTablosu = new DataTable();
-            sqlAdapteEt.Fill(sqlCekilenVeriTablosu);
+            //SqlDataAdapter sqlAdapteEt=new SqlDataAdapter(sqlKomutu);//SQL den veriler c# çekecek köprü görevi görür
+            //DataTable sqlCekilenVeriTablosu = new DataTable();
+            //sqlAdapteEt.Fill(sqlCekilenVeriTablosu);
 
-            foreach(DataRow row in sqlCekilenVeriTablosu.Rows)
-            {
-                foreach(var dr in row.ItemArray)
-                {
-                    Console.Write(dr.ToString()+" ");
-                }
-                Console.WriteLine() ;
-            }
-
-
+            //foreach(DataRow row in sqlCekilenVeriTablosu.Rows)
+            //{
+            //    foreach(var dr in row.ItemArray)
+            //    {
+            //        Console.Write(dr.ToString()+" ");
+            //    }
+            //    Console.WriteLine() ;
+            //}
 
 
 
-            baglanti.Close();
+
+
+            //baglanti.Close();
 
 
 
 
             #endregion
+            #region Ürün Silme İşlemi
 
+            //Console.Write("Silinecek Ürün ID:");
+            //int silinecekUrunId=int.Parse(Console.ReadLine());
+
+            //SqlConnection baglanti = new SqlConnection("Data Source=TIGER;initial Catalog=EgitimKampiDb;integrated security=true");
+            //baglanti.Open();
+            //SqlCommand sqlKomutu = new SqlCommand("Delete From TblProduct Where ProductId=@silinecekUrunId",baglanti);
+            //sqlKomutu.Parameters.AddWithValue("@silinecekUrunId",silinecekUrunId);
+            //sqlKomutu.ExecuteNonQuery();        
+
+            //baglanti.Close();
+
+            //Console.WriteLine("Ürün Silme İşlemi Başarılı!");
+            #endregion
             Console.Read();
 
 
