@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -98,6 +99,32 @@ namespace _10_DataBaseCrud
             //baglanti.Close();
 
             //Console.WriteLine("Ürün Silme İşlemi Başarılı!");
+            #endregion
+            #region Ürün Güncelleme
+            Console.Write("Güncellenecek Ürün ID:");
+            int urunId=int.Parse(Console.ReadLine());
+
+            Console.Write("Güncellenecek Ürün Adı:");
+            string urunAdi=Console.ReadLine();
+
+            Console.Write("Güncellenecek Ürün Fiyatı:");
+            decimal urunFiyati=decimal.Parse(Console.ReadLine());   
+
+            SqlConnection baglanti = new SqlConnection("Data Source=TIGER;initial Catalog=EgitimKampiDb;integrated security=true");
+            baglanti.Open();
+            SqlCommand sqlKomutu=new SqlCommand("Update TblProduct set ProductName=@urunAdi,ProductPrice=@urunFiyati where ProductId=@urunId",baglanti);
+            sqlKomutu.Parameters.AddWithValue ("@urunAdi",urunAdi);
+            sqlKomutu.Parameters.AddWithValue("@urunFiyati", urunFiyati);
+            sqlKomutu.Parameters.AddWithValue("@urunId", urunId);
+            sqlKomutu.ExecuteNonQuery();
+
+
+
+
+            baglanti.Close();
+            Console.WriteLine("Güncelleme Başarılı!");
+
+
             #endregion
             Console.Read();
 
