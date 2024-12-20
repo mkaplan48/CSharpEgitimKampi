@@ -46,6 +46,8 @@ namespace _10_DataBaseCrud
             sqlkomutu.Parameters.AddWithValue("@eklenecekUrunDurumu",true);
             sqlkomutu.ExecuteNonQuery();
             Console.WriteLine("Ürün Başarıyla Eklendi!");
+            baglanti.Close();
+           
 
 
 
