@@ -69,7 +69,7 @@ namespace _10_DataBaseCrud
             {
                 foreach(var dr in row.ItemArray)
                 {
-                    Console.WriteLine(dr.ToString());
+                    Console.Write(dr.ToString()+" ");
                 }
                 Console.WriteLine() ;
             }
